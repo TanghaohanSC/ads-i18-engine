@@ -4,7 +4,7 @@ Localization tool for iGaming marketing teams: upload finished source creatives 
 
 **Not a creative generation tool.** Text in → text out; image in → image out; video in → video out. AI edits, it does not create.
 
-See `../files_updated/` for the full design docs. Start with `CLAUDE.md` and `PROJECT.md`.
+See `docs/` for the full design docs. Start with `CLAUDE.md` and `PROJECT.md`.
 
 ## Architecture at a glance
 
@@ -54,7 +54,7 @@ Default admin account after seed: `admin@example.com` / `admin`.
 ## Repo layout
 
 ```
-app/
+ads-i18-engine/
 ├── backend/            FastAPI + SQLAlchemy + procrastinate
 │   ├── app/
 │   │   ├── main.py         app factory, CORS, routers
@@ -73,7 +73,9 @@ app/
 │   └── tests/
 ├── frontend/           Next.js 15 (App Router)
 ├── scripts/            dev shell helpers
-└── docs/               (symlink target for design docs if needed)
+├── docs/               design specs (CLAUDE.md, PROJECT.md, ARCHITECTURE.md, …)
+├── README.md
+└── INTEGRATION.md      playbook for merging this project into a parent product
 ```
 
 ## Development phases (from MVP_SCOPE.md)
@@ -86,7 +88,7 @@ app/
 
 ## House rules (must not violate)
 
-From `CLAUDE.md`:
+From `docs/CLAUDE.md`:
 
 1. Localization, not generation — AI edits, never creates from a brief.
 2. PSD-first, AI-backup — deterministic layer replacement whenever layers exist.
