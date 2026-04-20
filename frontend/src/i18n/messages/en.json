@@ -1,0 +1,90 @@
+{
+  "App": {
+    "name": "Ad Localization",
+    "tagline": "Localize finished creatives across 8 markets"
+  },
+  "Nav": {
+    "dashboard": "Dashboard",
+    "assets": "Assets",
+    "compliance": "Compliance",
+    "workflow": "Workflow",
+    "brand": "Brand",
+    "admin": "Admin",
+    "signOut": "Sign out"
+  },
+  "Auth": {
+    "signIn": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "signingIn": "Signing in…",
+    "invalidCredentials": "Invalid email or password",
+    "heading": "Sign in to Ad Localization",
+    "subheading": "Use the credentials provided by your admin."
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}",
+    "kpis": {
+      "assetsThisMonth": "Assets this month",
+      "pendingConfirmation": "Pending confirmation",
+      "complianceWarnings": "Open compliance warnings",
+      "aiCost": "AI spend (MTD)"
+    },
+    "recentActivity": "Recent activity",
+    "empty": "No activity yet."
+  },
+  "Assets": {
+    "title": "Assets",
+    "upload": "Upload source asset",
+    "empty": "Upload a PSD, image, or MP4 to get started.",
+    "columns": {
+      "file": "File",
+      "type": "Type",
+      "brand": "Brand",
+      "parseStatus": "Parse status",
+      "uploaded": "Uploaded"
+    }
+  },
+  "Compliance": {
+    "title": "Compliance",
+    "systemRules": "System default rules",
+    "brandOverrides": "Brand overrides",
+    "reasonRequired": "Reason required",
+    "severity": {
+      "critical": "Critical",
+      "warning": "Warning",
+      "info": "Info"
+    }
+  },
+  "Workflow": {
+    "title": "Workflow",
+    "queues": {
+      "awaitingConfirmation": "Awaiting confirmation",
+      "confirmed": "Confirmed",
+      "distributed": "Distributed"
+    },
+    "confirm": "Confirm and distribute"
+  },
+  "Admin": {
+    "title": "Admin",
+    "subMarkets": "Sub-markets",
+    "users": "Users",
+    "cost": "Cost report",
+    "overrideDashboard": "Cross-brand override dashboard"
+  },
+  "Markets": {
+    "US": "United States",
+    "UK": "United Kingdom",
+    "PH": "Philippines",
+    "IN": "India",
+    "BR": "Brazil",
+    "FR": "France",
+    "DE": "Germany",
+    "NG": "Nigeria"
+  },
+  "Errors": {
+    "generic": "Something went wrong. Please retry.",
+    "sessionExpired": "Your session has expired. Please sign in again."
+  }
+}

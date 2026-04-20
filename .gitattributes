@@ -1,0 +1,27 @@
+# Normalize line endings on checkout and store as LF in the repo.
+* text=auto eol=lf
+
+# Explicit text files
+*.py  text eol=lf
+*.ts  text eol=lf
+*.tsx text eol=lf
+*.js  text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md  text eol=lf
+*.sh  text eol=lf
+*.css text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.mako text eol=lf
+
+# Binary — do not touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.psd binary
+*.ai  binary
+*.pdf binary

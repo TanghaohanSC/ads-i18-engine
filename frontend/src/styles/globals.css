@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Palette — dark-first, admoboost-inspired
+ * Near-black background with a trace of blue, lime accent for primary action,
+ * subtle elevated surfaces and soft white borders.
+ */
+@layer base {
+  :root {
+    --background: 240 12% 5%;          /* #0B0B0F */
+    --foreground: 0 0% 98%;            /* #FAFAFA */
+
+    --card: 240 9% 8%;                 /* #14141A */
+    --card-foreground: 0 0% 98%;
+    --card-elevated: 240 9% 11%;       /* #1B1B23 */
+
+    --popover: 240 10% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 76 87% 58%;             /* #C6F432 lime */
+    --primary-foreground: 240 14% 6%;  /* near-black on lime */
+
+    --secondary: 240 8% 14%;           /* elevated neutral */
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 5% 64%;    /* ~ rgba(255,255,255,0.55) */
+
+    --accent: 240 8% 16%;              /* hover bg */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 64%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 17%;              /* subtle white-ish at 0.08 */
+    --input: 240 6% 17%;
+    --ring: 76 87% 58%;                /* focus ring = accent */
+
+    --radius: 0.75rem;                 /* slightly rounder — 12px */
+
+    --severity-critical: 0 80% 62%;
+    --severity-warning: 38 95% 60%;
+    --severity-info: 200 95% 62%;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      var(--font-sans),
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1,
+      'cv11' 1;
+    letter-spacing: -0.005em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  /* Inputs read better against the dark surfaces */
+  input,
+  textarea,
+  select {
+    background-color: hsl(var(--card));
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Native <select> dropdown inherits color-scheme but some combinations still
+   * render light. Pin both the closed field and the option list explicitly. */
+  select {
+    color-scheme: dark;
+  }
+  select option,
+  select optgroup {
+    background-color: hsl(var(--card));
+    color: hsl(var(--foreground));
+  }
+  select option:checked,
+  select option:hover {
+    background-color: hsl(var(--accent));
+  }
+
+  /* Scrollbar — subtle in dark theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted));
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer components {
+  .surface-elevated {
+    background-color: hsl(var(--card-elevated));
+  }
+
+  .glow {
+    box-shadow:
+      0 0 0 1px hsl(var(--border)),
+      0 10px 40px -20px hsl(var(--primary) / 0.35);
+  }
+}
